@@ -95,7 +95,7 @@ public class CartActivity extends AppCompatActivity {
         for (int i = 0; i < temparraylist.size(); i++) {
             grandTotalplus = grandTotalplus + temparraylist.get(i).getTotalCash();
         }
-        grandTotal.setText("Rs. " + String.valueOf(grandTotalplus));
+        grandTotal.setText("EGP " + String.valueOf(grandTotalplus));
         cartRecyclerView = findViewById(R.id.recycler_view_cart);
         cartAdapter = new CartAdapter(temparraylist, this);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this);
@@ -125,4 +125,6 @@ public class CartActivity extends AppCompatActivity {
         cartModels.addAll(temparraylist);
         //cartModels.clear();
     }
+
+
 }

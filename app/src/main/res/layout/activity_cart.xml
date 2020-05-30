@@ -20,7 +20,7 @@
     <LinearLayout
         android:id="@+id/proceed_to_book"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="10dp"
         android:layout_gravity="bottom"
         android:background="@color/colorPrimary"
         android:layout_weight=".2">
@@ -42,7 +42,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="Rs. 3400"
+            android:text="EGP 3400"
             android:textSize="24sp"
             android:textColor="#fff"
             android:gravity="left|center_vertical"

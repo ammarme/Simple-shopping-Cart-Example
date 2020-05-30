@@ -65,7 +65,7 @@ public class ProductAdapter extends  RecyclerView.Adapter<ProductAdapter.ViewHol
                 ImageView cartIncrement = dialog.findViewById(R.id.cart_increment);
                 ImageView closeDialog = dialog.findViewById(R.id.imageView_close_dialog_cart);
                 TextView updateQtyDialog = dialog.findViewById(R.id.update_quantity_dialog);
-                TextView viewCartDialog = dialog.findViewById(R.id.view_cart_button_dialog);
+                ImageView viewCartDialog = dialog.findViewById(R.id.view_cart_button_dialog);
                 final TextView quantity = dialog.findViewById(R.id.cart_product_quantity_tv);
                 quantity.setText(String.valueOf(0));
                 final int[] cartCounter = {0};//{(arrayListImage.get(position).getStocks())};

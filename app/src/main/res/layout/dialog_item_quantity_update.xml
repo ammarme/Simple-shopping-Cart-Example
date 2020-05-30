@@ -1,89 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="500dp"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
-    <LinearLayout
+    android:layout_width="412dp"
+    android:layout_height="270dp">
+
+
+    <View
+        android:id="@+id/view5"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center"
-        android:orientation="vertical"
-        android:id="@+id/click_after_amount">
-        <LinearLayout
-            android:background="@color/colorPrimary"
-            android:gravity="end|center_vertical"
-            android:layout_width="match_parent"
-            android:layout_height="50dp">
+        android:layout_height="60dp"
+        android:background="@color/colorPrimaryDark"
+        android:outlineAmbientShadowColor="@color/cardview_dark_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
-                android:id="@+id/imageView_close_dialog_cart"
-                android:src="@drawable/ic_back_arrow"
-                android:gravity="center"
-                android:layout_width="60dp"
-                android:layout_height="wrap_content" />
-
-        </LinearLayout>
-
-    <LinearLayout
-        android:layout_margin="10dp"
-        android:id="@+id/cart_plus_minus_layout"
-        android:layout_width="match_parent"
+    <ImageView
+        android:id="@+id/imageView_close_dialog_cart"
+        android:layout_width="60dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/product_cart_code"
-        android:orientation="horizontal"
-        android:layout_gravity="center"
-        android:gravity="center">
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:src="@drawable/ic_back_arrow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view5" />
 
 
-        <ImageView
-            android:id="@+id/cart_decrement"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_minus" />
+    <View
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="28dp"
+        android:background="@color/colorPrimaryDark"
+        android:outlineAmbientShadowColor="@color/cardview_dark_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cart_product_quantity_tv"
+        app:layout_constraintVertical_bias="1.0" />
 
-        <TextView
-            android:id="@+id/cart_product_quantity_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical|center_horizontal"
-            android:paddingLeft="15dip"
-            android:paddingRight="15dip"
-            android:text="10"
-            android:textColor="#000"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+    <ImageView
+        android:id="@+id/cart_decrement"
+        android:layout_width="85dp"
+        android:layout_height="92dp"
+        app:layout_constraintBottom_toTopOf="@+id/view3"
+        app:layout_constraintEnd_toStartOf="@+id/cart_product_quantity_tv"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view5"
+        app:srcCompat="@drawable/ic_minus" />
 
-        <ImageView
-            android:id="@+id/cart_increment"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_plus" />
-    </LinearLayout>
+    <TextView
+        android:id="@+id/cart_product_quantity_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:text="0"
+
+        android:textSize="50dp"
+        app:layout_constraintEnd_toStartOf="@+id/cart_increment"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/cart_decrement"
+        app:layout_constraintTop_toBottomOf="@+id/view5" />
+
+    <ImageView
+        android:id="@+id/cart_increment"
+        android:layout_width="85dp"
+        android:layout_height="92dp"
+        app:layout_constraintBottom_toTopOf="@+id/view3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/cart_product_quantity_tv"
+        app:layout_constraintTop_toBottomOf="@+id/view5"
+        app:srcCompat="@drawable/ic_plus" />
+
     <TextView
         android:id="@+id/update_quantity_dialog"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="Add to cart"
-        android:background="@color/colorPrimary"
-        android:layout_margin="10dp"
-        android:textColor="#fff"
-        android:textAlignment="center"
-        />
-        <TextView
-            android:visibility="gone"
-            android:id="@+id/view_cart_button_dialog"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="View Cart"
-            android:background="@color/colorPrimary"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="10dp"
-            android:textColor="#fff"
-            android:textAlignment="center"/>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:gravity="center"
+        android:text="Add to the Cart"
+        android:textColor="#FFFF"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view3"
+        app:layout_constraintEnd_toStartOf="@+id/view3"
+        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintStart_toEndOf="@+id/view3" />
 
-</LinearLayout>
-</LinearLayout>
+    <ImageView
+        android:id="@+id/view_cart_button_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/view5"
+        app:layout_constraintHorizontal_bias="0.832"
+        app:layout_constraintStart_toEndOf="@+id/imageView_close_dialog_cart"
+        app:layout_constraintTop_toTopOf="@+id/view5"
+        app:srcCompat="@drawable/ic_shopping_cart_white_24dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
