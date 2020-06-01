@@ -51,6 +51,8 @@ public class ProductAdapter extends  RecyclerView.Adapter<ProductAdapter.ViewHol
     public void onBindViewHolder(@NonNull final ProductAdapter.ViewHolder viewHolder, final int i) {
         //viewHolder.productImage.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.bag));
         viewHolder.productName.setText(productsArray.get(i).productName);
+        viewHolder.productPrice.setText(productsArray.get(i).price);
+
         viewHolder.productImage.setImageDrawable(ContextCompat.getDrawable(context, productsArray.get(i).imagePath));
 
         viewHolder.productImage.setOnClickListener(new View.OnClickListener() {
@@ -183,6 +185,8 @@ public class ProductAdapter extends  RecyclerView.Adapter<ProductAdapter.ViewHol
         void addCartItemView();
     }
     // this interface creates for call the invalidateoptionmenu() for refresh the menu item
+
+
     public interface HomeCallBack {
         void updateCartCount(Context context);
     }
@@ -190,11 +194,13 @@ public class ProductAdapter extends  RecyclerView.Adapter<ProductAdapter.ViewHol
     class ViewHolder extends RecyclerView.ViewHolder {
         ImageView productImage;
         TextView productName;
+        TextView productPrice;
 
         ViewHolder(View itemView) {
             super(itemView);
             productImage = itemView.findViewById(R.id.android_gridview_image);
             productName = itemView.findViewById(R.id.android_gridview_text);
+            productPrice=itemView.findViewById(R.id.android_gridview_price);
         }
     }
 }
